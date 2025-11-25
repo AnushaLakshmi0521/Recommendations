@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recommendations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <!-- NavBar Start -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt="cropsense" width="50px" height="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end
+      " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-bold  mx-3 " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold mx-3 active" href="./recommendations.html">Our AI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold mx-3" href="./aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold mx-3" href="./contactus.html">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- NavBar End -->
+
+  <!-- Summary Start -->
+  <div id="main-content-wrapper">
+    <div class="container my-5" data-aos="fade-up">
+      <div class="row" data-aos="fade-up">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <h1 class="fw-bold text-success summary-title">PREDICT</h1>
+          <h1 class="fw-bold text-success summary-title">PROTECT</h1>
+          <h1 class="fw-bold text-success summary-title">PRODUCE</h1>
+          <p class="fw-semibold text-muted">Cultivating Intelligence for Precision at the Root</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="card rounded-4">
+            <img src="./assets/OurAi.jpg" alt="" class="rounded-4">
+          </div>
+        </div>
+      </div>
+
+      <div class="conatiner bg-white my-5 p-3" data-aos="fade-up">
+        <h2 class="fw-bold text-success my-3 summary-title-1 pb-2">What Our System Does</h2>
+        <p class="text-muted summary-text">Our solution combines soil analytics, crop physiology, environmental
+          intelligence, and machine learning to
+          deliver real-time farm insights and actionable recommendations. The system analyzes crop health, soil
+          condition, crop stage, nutrient balance, and other metrics then converts raw field data into precision
+          agronomy guidance and gives suggestions to improve the crop health and therefore the improved productivity.
+        </p>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+
+          <div class="card p-3">
+            <h4 class="fw-bold text-success pb-2 card-title">Plant Health Assessment</h4>
+            <p class="text-muted card-text">The system evaluates crop growth, pest risk, nutrient imbalance, irrigation
+              condition, and environmental
+              response to generate a Plant Health Index (PHI).
+              It identifies early-stage issues and provides clear alerts before yield loss occurs.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+
+          <div class="card p-3">
+            <h4 class="fw-bold text-success pb-2 card-title">Precision Recommendation System</h4>
+            <p class="text-muted card-text">Our system analyzes nutrient gaps, stress factors, and crop requirements to
+              deliver a targeted treatment
+              strategy.
+              It recommends the right fertilizer, pesticide, or micronutrient along with the appropriate dosage and
+              timing based on the crop stage and field conditions.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="my-5" data-aos="fade-up">
+        <button class="btn-recommendations my-3 px-4 py-3 rounded-3 text-white fw-bold" data-bs-toggle="modal"
+          data-bs-target="#recommendationModal" style="cursor: pointer;">
+          <span class="text-decoration-none fs-6 fw-semibold btn-link">Try Our AI</span>
+        </button>
+        <button id="helpButton" class="rounded-3 text-white fw-bold p-2">Get Help</button>
+      </div>
+
+
+    </div>
+
+     <div id="videoModal" class="modal-video">
+          <div class="modal-content-video">
+            <span class="close-button">&times;</span>
+            <video id="popupVideo" width="640" height="360" controls>
+              <source src="./assets/bannervideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+  </div>
+  <!-- Summary End -->
+
+  <!-- Input Form Start-->
+  <div class="modal fade" id="recommendationModal" tabindex="-1" aria-labelledby="recommendationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #E8F5E9;">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="recommendations-container my-5 py-4 px-3 mx-auto"
+            style="margin-top: 0 !important; margin-bottom: 0 !important;">
+
+
+
+            <div class="progress mb-4" role="progressbar" aria-label="Step Progress" aria-valuenow="16.6"
+              aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+              <div id="progressBar" class="progress-bar bg-success" style="width: 16.6%;"></div>
+            </div>
+            <div class="card p-4 shadow-lg">
+
+              <div id="step1" class="step-card active rounded-3 bg-white p-3 shadow-lg" data-aos="fade-left">
+                <h2 class="question-title fs-3 text-success fw-bold py-3">Step 1: Select Your Crop</h2>
+                <div class="row selection-grid">
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Rice">
+                      <img src="./assets/rice.jpg" alt="Rice Crop">
+                      <div class="img-selection-label">Rice</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Wheat">
+                      <img src="./assets/wheat.jpg" alt="Wheat Crop">
+                      <div class="img-selection-label">Wheat</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Maize">
+                      <img src="./assets/maize.jpg" alt="Maize Crop">
+                      <div class="img-selection-label">Maize</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Cotton">
+                      <img src="./assets/cotton.jpg" alt="Cotton Crop">
+                      <div class="img-selection-label">Cotton</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Onion">
+                      <img src="./assets/onion.jpg" alt="Onion Crop">
+                      <div class="img-selection-label">Onion</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Barley">
+                      <img src="./assets/barley.webp" alt="Barley Crop">
+                      <div class="img-selection-label">Barley</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Soybean">
+                      <img src="./assets/soyabean.webp" alt="Soybean Crop">
+                      <div class="img-selection-label">Soybean</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Turmeric">
+                      <img src="./assets/turmeric.webp" alt="Turmeric Crop">
+                      <div class="img-selection-label">Turmeric</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Ragi">
+                      <img src="./assets/ragi.webp" alt="Ragi Crop">
+                      <div class="img-selection-label">Ragi</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Jowar">
+                      <img src="./assets/jowar.webp" alt="Jowar Crop">
+                      <div class="img-selection-label">Jowar</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Bajra">
+                      <img src="./assets/bajra.webp" alt="Bajra Crop">
+                      <div class="img-selection-label">Bajra</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Greengram">
+                      <img src="./assets/greengram.jpg" alt="Greengram Crop">
+                      <div class="img-selection-label">Greengram</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Chana">
+                      <img src="./assets/chana.jpg" alt="Chana Crop">
+                      <div class="img-selection-label">Chana</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Mustard">
+                      <img src="./assets/mustard.jpg" alt="Mustard Crop">
+                      <div class="img-selection-label">Mustard</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Blackgram">
+                      <img src="./assets/blackgram.jpg" alt="Blackgram Crop">
+                      <div class="img-selection-label">Blackgram</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Lobia">
+                      <img src="./assets/lobia.jpg" alt="Lobia Crop">
+                      <div class="img-selection-label">Lobia</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Lentil">
+                      <img src="./assets/lentil.jpg" alt="Lentil Crop">
+                      <div class="img-selection-label">Lentil</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-2 mb-4">
+                    <div class="img-selection" data-crop="Sunflower">
+                      <img src="./assets/sunflower.webp" alt="Sunflower Crop">
+                      <div class="img-selection-label">Sunflower</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step2" class="step-card" data-aos="fade-left">
+                <h2 class="question-title fs-3">Step 2: Select Your Soil Type</h2>
+                <p class="lead text-muted">Which type of soil is predominantly found in your field?</p>
+                <div class="row selection-grid justify-content-center">
+                  <div class="col-4 col-md-3 mb-4">
+                    <div class="img-selection" data-soil="Alluvial">
+                      <img src="./assets/alluvialSoil.jpg" alt="Alluvial Soil">
+                      <div class="img-selection-label">Alluvial Soil</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-3 mb-4">
+                    <div class="img-selection" data-soil="Black">
+                      <img src="./assets/blacksoil.webp" alt="Black Soil">
+                      <div class="img-selection-label">Black Soil</div>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-3 mb-4">
+                    <div class="img-selection" data-soil="Red">
+                      <img src="./assets/redSoil.jpg" alt="Red Soil">
+                      <div class="img-selection-label">Red Soil</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step3" class="step-card" data-aos="fade-left">
+                <h2 class="question-title fs-3">Step 3: Determine Your Crop's Age</h2>
+                <p class="lead text-muted">How old is your crop? Select a range or enter the sowing date.</p>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <h3>Select Age Range:</h3>
+                    <div class="option-group">
+                      <input type="radio" id="age0_15" name="cropAgeOption" value="0-15">
+                      <label for="age0_15" class="shadow-sm">0 - 15 days (Early Stage)</label>
+                      <input type="radio" id="age16_30" name="cropAgeOption" value="16-30">
+                      <label for="age16_30" class="shadow-sm">16 - 30 days (Vegetative Growth)</label>
+                      <input type="radio" id="age31_45" name="cropAgeOption" value="31-45">
+                      <label for="age31_45" class="shadow-sm">31 - 45 days (Mid-Growth)</label>
+                      <input type="radio" id="age46_60" name="cropAgeOption" value="46-60">
+                      <label for="age46_60" class="shadow-sm">46 - 60+ days (Pre-Flowering/Fruiting)</label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 my-5">
+                    <h3>OR</h3>
+                  </div>
+                  <div class="col-md-5 mb-4">
+                    <h3> Select Sowing Date:</h3>
+                    <label for="sowingDate" class="form-label">Sowing Date</label>
+                    <input type="date" id="sowingDate" class="form-control p-2 shadow-sm">
+                    <small class="text-muted">Selecting the date will override the age range.</small>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step4" class="step-card" data-aos="fade-left">
+                <h2 class="question-title fs-3">Step 4: Irrigation and Land Status</h2>
+
+                <div class="mb-5">
+                  <label class="form-label fs-5 fw-semibold">How do you primarily irrigate your land?</label>
+                  <div id="irrigationMethodSelection" class="row selection-grid justify-content-start">
+                    <div class="col-4 col-md-2 mb-4">
+                      <div class="img-selection" data-irrigation="Drip">
+                        <img src="./assets/drip-irrigation.jpg" alt="Drip Irrigation">
+                        <div class="img-selection-label">Drip Irrigation</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4">
+                      <div class="img-selection" data-irrigation="Sprinkler">
+                        <img src="./assets/sprinkler-irrigation.jpg" alt="Sprinkler Irrigation">
+                        <div class="img-selection-label">Sprinkler</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4">
+                      <div class="img-selection" data-irrigation="Canal">
+                        <img src="./assets/canal-irrigation.jpg" alt="Canal Irrigation">
+                        <div class="img-selection-label">Canal Irrigation</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4">
+                      <div class="img-selection" data-irrigation="Borewell">
+                        <img src="./assets/borewell-irrigation.jpg" alt="Borewell/Tubewell">
+                        <div class="img-selection-label">Borewell Irrigation</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4">
+                      <div class="img-selection" data-irrigation="Rainfed">
+                        <img src="./assets/Rainfeed-irrigation.jpg" alt="Rainfed Land">
+                        <div class="img-selection-label">Rainfed Irrigation</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label fs-5 fw-semibold">What is the current irrigation status of your
+                    land?</label>
+                  <div class="option-group">
+                    <input type="radio" id="statusWet" name="irrigationStatus" value="Wet">
+                    <label for="statusWet" class="shadow-sm">Wet/Moist (Recently irrigated)</label>
+                    <input type="radio" id="statusSlightlyDry" name="irrigationStatus" value="Slightly Dry">
+                    <label for="statusSlightlyDry" class="shadow-sm">Slightly Dry (Needs irrigation soon)</label>
+                    <input type="radio" id="statusDry" name="irrigationStatus" value="Dry">
+                    <label for="statusDry" class="shadow-sm">Dry/Cracked (Urgent irrigation needed)</label>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step5" class="step-card" data-aos="fade-left">
+                <h2 class="question-title fs-3">Step 5: Assess Plant Appearance</h2>
+                <p class="lead text-muted">Select the image that best matches your crop's current condition for each
+                  category. (Select one in each row)</p>
+
+                <div id="leafColorGroup" class="appearance-group mb-5">
+                  <h4 class="mb-3">1. Leaf Color:</h4>
+                  <div class="row selection-grid justify-content-center">
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-color="Dark Green">
+                        <img src="./assets/darkgreen.jpg" alt="Dark Green Leaf">
+                        <div class="img-selection-label">Dark Green</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-color="Noraml Green">
+                        <img src="./assets/noramlgreen.webp" alt="Noraml Green Leaf">
+                        <div class="img-selection-label">Noraml Green</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-color="Yellowish">
+                        <img src="./assets/yellowleaf.webp" alt="Yellowish Leaf">
+                        <div class="img-selection-label">Yellowish</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="spotsGroup" class="appearance-group mb-5">
+                  <h4 class="mb-3">2. Yellow or Brown Spots:</h4>
+                  <div class="row selection-grid justify-content-center">
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-spots="None">
+                        <img src="./assets/nospots.png" alt="No Spots">
+                        <div class="img-selection-label">None Visible</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-spots="Yellow Spots">
+                        <img src="./assets/fewspots.jpg" alt="Yellow Spots">
+                        <div class="img-selection-label">Few Yellow Spots</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-spots="Brown Spots">
+                        <img src="./assets/manyspots.jpg" alt="Brown Spots">
+                        <div class="img-selection-label">Many Spots</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="pestsGroup" class="appearance-group mb-4">
+                  <h4 class="mb-3">3. Insects or Pest Damages Visible:</h4>
+                  <div class="row selection-grid justify-content-center">
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-pest="No Damage">
+                        <img src="./assets/nospots.png" alt="No Damage">
+                        <div class="img-selection-label">No Visible Damage</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-pest="Low Damage">
+                        <img src="./assets/low-pest damage.jpg" alt="Low Damage">
+                        <div class="img-selection-label">Low Visible Damage</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-pest="Moderate Damage">
+                        <img src="./assets/moderate-pest.jpg" alt="Moderate Damage">
+                        <div class="img-selection-label">Moderate Visible Damage</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-pest="High Damage">
+                        <img src="./assets/high-pest.jpg" alt="High Damage">
+                        <div class="img-selection-label">High Visible Damage</div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                      <div class="img-selection" data-pest="Severe Damage">
+                        <img src="./assets/severe-pest (1).jpg" alt="Severe Damage">
+                        <div class="img-selection-label">High Visible Damage</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="step6" class="step-card" data-aos="fade-left">
+                <h2 class="question-title fs-3">Step 6: Previous Fertilizer Application</h2>
+
+                <div class="mb-4">
+                  <label class="form-label fs-5 fw-semibold">Did you use fertilizer in the last 15 days?</label>
+                  <div class="option-group d-flex gap-4">
+                    <div>
+                      <input type="radio" id="fertilizerYes" name="usedFertilizer" value="Yes">
+                      <label for="fertilizerYes" class="shadow-sm">Yes</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="fertilizerNo" name="usedFertilizer" value="No" checked>
+                      <label for="fertilizerNo" class="shadow-sm">No</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="fertilizerDetails" style="display: none;">
+                  <h4 class="mb-3 text-success">Fertilizer Details</h4>
+
+                  <div class="mb-4">
+                    <label for="fertilizerType" class="form-label fw-semibold">Which fertilizer did you use?</label>
+                    <select id="fertilizerType" class="form-select p-2 shadow-sm">
+                      <option value="">Select Fertilizer Type...</option>
+                      <option value="Urea">Urea (N-rich)</option>
+                      <option value="DAP">DAP (Di-ammonium Phosphate)</option>
+                      <option value="MOP">MOP (Muriate of Potash)</option>
+                      <option value="NPK">Complex NPK (15:15:15)</option>
+                      <option value="SSP">SSP (Single Super Phosphate)</option>
+                      <option value="Organic">Organic Manure/Compost</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-semibold">How much quantity did you use?</label>
+                    <div class="option-group d-flex gap-4">
+                      <div>
+                        <input type="radio" id="qtyLow" name="fertilizerQuantity" value="Low">
+                        <label for="qtyLow" class="shadow-sm">Low</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="qtyModerate" name="fertilizerQuantity" value="Moderate">
+                        <label for="qtyModerate" class="shadow-sm">Moderate</label>
+                      </div>
+                      <div>
+                        <input type="radio" id="qtyHigh" name="fertilizerQuantity" value="High">
+                        <label for="qtyHigh" class="shadow-sm">High</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between mt-5">
+                <button id="prevStepBtn" class="prev-step-btn" style="display:none;">&laquo; Previous</button>
+                <div>
+                  <button id="nextStepBtn" class="next-step-btn" style="display:none;">Next &raquo;</button>
+                  <button id="getRecommendationBtn" class="next-step-btn" style="display:none;">Get
+                    Recommendation</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Input Form End -->
+
+  <!-- Footer Start -->
+  <footer class="footer p-3">
+    <div class="container mt-4">
+      <div class="row gy-3">
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <h1 class="text-capitalize fs-3">CROPSENSE</h1>
+          <img src="./assets/logo.png" alt="" width="150px" height="150px">
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <h3 class="footer-tittle">Navigation</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-capitalize"><a href="./index.html" class="text-decoration-none footer-link">Home</a>
+            </li>
+            <li class="mb-2 text-capitalize"><a href="./recommendations.html"
+                class="text-decoration-none footer-link">Our AI</a></li>
+            <li class="mb-2 text-capitalize"><a href="./aboutus.html" class="text-decoration-none footer-link">About
+                Us</a></li>
+            <li class="mb-2 text-capitalize"><a href="./contactus.html" class="text-decoration-none footer-link">Contact
+                Us</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <h3 class="footer-tittle">Our Address</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-capitalize"><i class="bi me-2 bi-geo-alt-fill"></i>KPHB Colony, Hyderabad, India.</li>
+            <li class="mb-2 text-capitalize"><i class="bi me-2 bi-telephone-fill"></i>+91 50044-55-900</li>
+            <li class="mb-2 text-capitalize"><i class="bi me-2 bi-envelope-fill"></i>cropsense@help.us</li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+          <h3 class="footer-tittle">Connect With Us</h3>
+          <div class="social-icons mb-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+          <a href="./contactus.html" class="contact-btn-footer text-decoration-none">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-3 border-top mt-4" style="border-color: #C8E6C9!important;">
+      <h4 class="lead text-center" style="color: #4C5A4C;">Copyright © 2025 CROPSENSE. All Rights Reserved
+      </h4>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
